@@ -1,0 +1,323 @@
+@charset "UTF-8";
+/* ---------- ロードアニメーション ---------- */
+.header, .mainvisual {
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header {
+  -webkit-transform: translateX(30vw);
+          transform: translateX(30vw);
+}
+
+.header.active, .mainvisual.active {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* ---------- ロードアニメーション ---------- */
+/* ---------- スクロールアニメーション ---------- */
+section {
+  opacity: 0;
+  -webkit-transform: translateY(50vh);
+          transform: translateY(50vh);
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+section.active {
+  opacity: 1;
+  -webkit-transform: none;
+          transform: none;
+}
+
+/* ---------- スクロールアニメーション ---------- */
+/* ---------- ナビゲーションアニメ ---------- */
+/* ナビゲーションフェードイン */
+.res-nav ul {
+  opacity: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.res-nav ul li {
+  opacity: 0;
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+}
+
+.res-nav.inview {
+  display: block;
+}
+
+.res-nav.inview ul {
+  opacity: 1;
+}
+
+.res-nav.inview ul li {
+  -webkit-animation-name: "nav-animation";
+          animation-name: "nav-animation";
+  -webkit-animation-duration: 0.35s;
+          animation-duration: 0.35s;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.res-nav.inview ul li:nth-of-type(1) {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.res-nav.inview ul li:nth-of-type(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.res-nav.inview ul li:nth-of-type(3) {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.res-nav.inview ul li:nth-of-type(4) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.res-nav.inview ul li:nth-of-type(5) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes nav-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100vh);
+            transform: translateX(100vh);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes nav-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100vh);
+            transform: translateX(100vh);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+/* ナビゲーションフェードイン */
+/* ---------- ナビゲーションアニメ ---------- */
+/* ---------- Topページ ---------- */
+/* demo */
+.cube .defo-face {
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  -webkit-animation-name: "cube-defo";
+          animation-name: "cube-defo";
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+.cube .hover-face {
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+  -webkit-animation-name: "cube-hover";
+          animation-name: "cube-hover";
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
+@-webkit-keyframes cube-defo {
+  50% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+@keyframes cube-defo {
+  50% {
+    -webkit-transform: rotateX(-90deg);
+            transform: rotateX(-90deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+@-webkit-keyframes cube-hover {
+  50% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+}
+
+@keyframes cube-hover {
+  50% {
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+  100% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+}
+
+/* demo */
+/* ---------- Topページ ---------- */
+@media screen and (min-width: 701px) {
+  /* ---------- ナビゲーション ---------- */
+  /* マウスオーバー */
+  /* .res-nav.inview {
+        a {
+          position: relative;
+          top: 0;
+          transition: .3s;
+
+          &::after {
+            content: "";
+            background-color: #f0f0f0;
+            width: 0%;
+            height: 1px;
+            display: block;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            transform-origin: center;
+            transition: .2s;
+          }
+
+          &:hover {
+            color: #cccccc;
+            font-style: italic;
+            transform: scale(1.2);
+          }
+
+          &:hover::after {
+            width: 50%;
+          }
+        }
+      } */
+  .normal-nav li a {
+    position: relative;
+    top: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .normal-nav li a::before {
+    content: "";
+    background-color: #f0f0f0;
+    width: 0%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  .normal-nav li a:hover {
+    color: #202020;
+    font-style: italic;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  .normal-nav li a:hover::before {
+    width: 150%;
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transform: translateX(20%) skew(-20deg);
+            transform: translateX(20%) skew(-20deg);
+  }
+  /* マウスオーバー */
+  /* ---------- ナビゲーション ---------- */
+  /* ---------- works ---------- */
+  .works .container {
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .works .container:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+/* ---------- works ---------- */
+/* ---------- contact ---------- */
+.contact a {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.contact a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+/* ---------- contact ---------- */
+/* ---------- demo ---------- */
+.cube:hover .defo-face {
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+}
+
+.cube:hover .hover-face {
+  -webkit-animation-name: none;
+          animation-name: none;
+  -webkit-transform: rotateX(0);
+          transform: rotateX(0);
+}
+
+/* ---------- demo ---------- */
